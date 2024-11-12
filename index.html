@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Notifications</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon Link in PNG format -->
+    <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<body>
+
+
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Content Overlay -->
+    <div class="content-overlay">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="rainbow-text">Exam Notifications</h1>
+            <p>Latest Exam Notifications!</p>
+        </header>
+
+        <!-- Notifications Section -->
+        <section class="notifications">
+            <h2>Latest Notifications</h2>
+            <div class="notification-list">
+                <!-- Sample notifications with improved visibility and colors -->
+                <div class="notification-box blue">The new exam is going to held on 13th November.</div>
+                <div class="notification-box red">Be prepared for your exam..</div>
+                <div class="notification-box green">Ensure to generate admit card from our portal..</div>
+            </div>
+        </section>
+
+        <!-- Contact & Social Section -->
+        <footer class="footer">
+            <div class="contact">
+            </div>
+            <div class="social">
+                <a href="https://www.youtube.com/watch?v=7TSI2-jK3A" class="youtube-button" target="_blank">Our YouTube Video</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript to add dynamic notifications -->
+    <script>
+        // Dynamic notifications
+        const messages = [
+            { text: "After admit card generation, provide us your roll and pass, so we can fit it on our systems..", color: "purple" },
+            { text: "We Kindly request you to share your admit card with us. so we can fit your details in our exam systems..", color: "orange" }
+        ];
+
+        const notificationList = document.querySelector('.notification-list');
+        messages.forEach(message => {
+            const box = document.createElement('div');
+            box.className = `notification-box ${message.color}`;
+            box.textContent = message.text;
+            notificationList.appendChild(box);
+        });
+    </script>
+</body>
+</html>
